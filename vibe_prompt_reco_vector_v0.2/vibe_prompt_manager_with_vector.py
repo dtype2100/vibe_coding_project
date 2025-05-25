@@ -69,8 +69,12 @@ def recommend(tags: Dict[str, List[str]], prompts: List[Dict], top_k: int = 3) -
 
 @st.cache_resource
 def build_vectorstore(prompts: List[Dict]) -> FAISS:
-    # HuggingFace의 sentence-transformers 모델 사용
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    # 한국어 특화 모델 사용
+    embeddings = HuggingFaceEmbeddings(
+        model_name="jhgan/ko-sroberta-multitask",
+        model_kwargs={'device': 'cpu'},
+        encode_kwargs={'normalize_embeddings': True}
+    )
     texts = [item.get("prompt", "") for item in prompts]
     vs = FAISS.from_texts(texts, embeddings, metadatas=prompts)
     return vs
@@ -83,7 +87,11 @@ def vector_recommend(user_input: str, prompts: List[Dict], top_k: int = 3) -> Li
 # -----------------------------------------------------
 
 # Streamlit UI 설정
-st.set_page_config(page_title="Vibe Coding Prompt Recommender", layout="wide")
+st.set_page_config(
+    page_title="Vibe Coding Prompt Recommender",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 st.title("🧠 바이브 코딩 프롬프트 추천 시스템")
 
 tab1, tab2, tab3 = st.tabs(["✨ 추천 받기", "📄 프롬프트 목록", "➕ 프롬프트 추가"])
@@ -128,13 +136,104 @@ with tab1:
 with tab2:
     st.subheader("📄 전체 프롬프트 목록")
     prompts = load_prompts()
+    
     if prompts:
-        for item in prompts:
-            with st.expander(f"{item.get('title')} [{item.get('category')}]"):
-                st.markdown(item.get("prompt", ""))
-                st.markdown(
-                    f"레벨: `{item.get('level')}` / 도구: `{item.get('tool')}` / 키워드: {', '.join(item.get('keywords', []))}"
-                )
+        # 필터링 옵션
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            selected_category = st.multiselect(
+                "분야 필터",
+                options=sorted(set(p.get("category") for p in prompts)),
+                default=[]
+            )
+        with col2:
+            selected_level = st.multiselect(
+                "레벨 필터",
+                options=sorted(set(p.get("level") for p in prompts)),
+                default=[]
+            )
+        with col3:
+            selected_tool = st.multiselect(
+                "도구 필터",
+                options=sorted(set(p.get("tool") for p in prompts)),
+                default=[]
+            )
+        
+        # 검색 기능
+        search_query = st.text_input("🔍 프롬프트 검색", placeholder="제목, 내용, 키워드로 검색")
+        
+        # 정렬 옵션
+        sort_by = st.selectbox(
+            "정렬 기준",
+            ["최신순", "제목순", "분야순", "레벨순"]
+        )
+        
+        # 필터링 및 검색 적용
+        filtered_prompts = prompts
+        if selected_category:
+            filtered_prompts = [p for p in filtered_prompts if p.get("category") in selected_category]
+        if selected_level:
+            filtered_prompts = [p for p in filtered_prompts if p.get("level") in selected_level]
+        if selected_tool:
+            filtered_prompts = [p for p in filtered_prompts if p.get("tool") in selected_tool]
+        if search_query:
+            search_query = search_query.lower()
+            filtered_prompts = [
+                p for p in filtered_prompts
+                if search_query in p.get("title", "").lower()
+                or search_query in p.get("prompt", "").lower()
+                or any(search_query in kw.lower() for kw in p.get("keywords", []))
+            ]
+        
+        # 정렬 적용
+        if sort_by == "최신순":
+            filtered_prompts = filtered_prompts[::-1]  # 최신 추가된 순
+        elif sort_by == "제목순":
+            filtered_prompts = sorted(filtered_prompts, key=lambda x: x.get("title", ""))
+        elif sort_by == "분야순":
+            filtered_prompts = sorted(filtered_prompts, key=lambda x: (x.get("category", ""), x.get("title", "")))
+        elif sort_by == "레벨순":
+            level_order = {"입문": 0, "중급": 1, "고급": 2}
+            filtered_prompts = sorted(filtered_prompts, key=lambda x: (level_order.get(x.get("level", ""), 0), x.get("title", "")))
+        
+        # 페이지네이션
+        items_per_page = 10
+        total_pages = (len(filtered_prompts) + items_per_page - 1) // items_per_page
+        
+        # 페이지 선택
+        if total_pages > 1:
+            current_page = st.selectbox(
+                "페이지",
+                range(1, total_pages + 1),
+                format_func=lambda x: f"페이지 {x} / {total_pages}"
+            )
+        else:
+            current_page = 1
+        
+        # 현재 페이지의 프롬프트만 표시
+        start_idx = (current_page - 1) * items_per_page
+        end_idx = start_idx + items_per_page
+        current_prompts = filtered_prompts[start_idx:end_idx]
+        
+        # 결과 표시
+        st.markdown(f"**총 {len(filtered_prompts)}개의 프롬프트**")
+        
+        for item in current_prompts:
+            with st.expander(f"### {item.get('title')}"):
+                col1, col2 = st.columns([2, 1])
+                with col1:
+                    st.markdown("**프롬프트 내용**")
+                    st.code(item.get("prompt", ""), language="text")
+                with col2:
+                    st.markdown("**메타데이터**")
+                    st.markdown(f"📌 분야: `{item.get('category')}`")
+                    st.markdown(f"🛠️ 도구: `{item.get('tool')}`")
+                    st.markdown(f"📚 프레임워크: `{item.get('framework')}`")
+                    st.markdown(f"⭐ 레벨: `{item.get('level')}`")
+                    st.markdown("🔑 키워드:")
+                    for kw in item.get("keywords", []):
+                        st.markdown(f"- `{kw}`")
+            st.markdown("---")
     else:
         st.info("저장된 프롬프트가 없습니다. ➕ '프롬프트 추가' 탭에서 새 프롬프트를 만들어보세요.")
 
