@@ -6,11 +6,11 @@
 ## 2. 핵심 컴포넌트
 
 ### 2.1 임베딩 모델
-- **모델**: `sentence-transformers/all-MiniLM-L6-v2`
-- **특징**: 
-  - 384차원의 고정된 크기 벡터 생성
-  - 다국어 지원
-  - 빠른 처리 속도와 적절한 성능의 균형
+- **모델**: `jhgan/ko-sroberta-multitask`
+- **특징**:
+  - 768차원의 고정된 크기 벡터 생성
+  - 한국어 특화 모델
+  - 높은 이해도와 정확한 의미 분석에 중점
 
 ### 2.2 벡터 저장소
 - **사용 기술**: FAISS (Facebook AI Similarity Search)
@@ -38,7 +38,7 @@
 @st.cache_resource
 def build_vectorstore(prompts: List[Dict]) -> FAISS:
     embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+        model_name="jhgan/ko-sroberta-multitask"
     )
     texts = [item.get("prompt", "") for item in prompts]
     vs = FAISS.from_texts(texts, embeddings, metadatas=prompts)
