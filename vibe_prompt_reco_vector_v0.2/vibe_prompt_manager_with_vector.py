@@ -15,6 +15,16 @@ DB_FILE = (
     else "vibe_prompts_structured_upgraded.json"
 )
 
+# Global constant for category keywords
+CATEGORY_KEYWORDS_DATA = {
+    "프론트엔드": ["ui", "폼", "리액트", "react", "tailwind", "상태", "프론트"],
+    "백엔드": ["api", "로그인", "fastapi", "서버", "rest", "인증"],
+    "AI/LLM": ["gpt", "llm", "요약", "langchain", "llama", "프롬프트"],
+    "데이터분석": ["pandas", "시각화", "csv", "plotly", "분석", "데이터"],
+    "DevOps": ["docker", "배포", "ci", "github actions"],
+    "기초": ["홀수", "짝수", "기초", "python", "입문"]
+}
+
 # Load prompts
 @st.cache_data
 def load_prompts() -> List[Dict]:
@@ -22,6 +32,7 @@ def load_prompts() -> List[Dict]:
         with open(DB_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
+        st.info("DB 파일이 존재하지 않아 새로 생성합니다. 프롬프트를 추가해보세요.")
         return []
 
 # Save prompts
@@ -32,17 +43,9 @@ def save_prompts(prompts: List[Dict]) -> None:
 # Extract tags from user input
 def extract_tags(text: str) -> Dict[str, List[str]]:
     text_lower = text.lower()
-    category_keywords = {
-        "프론트엔드": ["ui", "폼", "리액트", "react", "tailwind", "상태", "프론트"],
-        "백엔드": ["api", "로그인", "fastapi", "서버", "rest", "인증"],
-        "AI/LLM": ["gpt", "llm", "요약", "langchain", "llama", "프롬프트"],
-        "데이터분석": ["pandas", "시각화", "csv", "plotly", "분석", "데이터"],
-        "DevOps": ["docker", "배포", "ci", "github actions"],
-        "기초": ["홀수", "짝수", "기초", "python", "입문"]
-    }
     matched_categories = []
     matched_keywords = []
-    for category, keywords in category_keywords.items():
+    for category, keywords in CATEGORY_KEYWORDS_DATA.items(): # Use global constant
         for kw in keywords:
             if kw in text_lower:
                 matched_categories.append(category)
@@ -80,8 +83,9 @@ def build_vectorstore(prompts: List[Dict]) -> FAISS:
     return vs
 
 # 입력 문장에 대해 벡터 유사도 검색 수행
-def vector_recommend(user_input: str, prompts: List[Dict], top_k: int = 3) -> List[Dict]:
-    vs = build_vectorstore(prompts)
+def vector_recommend(user_input: str, vs: FAISS, top_k: int = 3) -> List[Dict]:
+    if vs is None: # Handle case where vector_store might be None (e.g. no prompts)
+        return []
     results = vs.similarity_search_with_score(user_input, k=top_k)
     return [doc.metadata for doc, _ in results]
 # -----------------------------------------------------
@@ -113,12 +117,19 @@ with tab1:
     recommend_mode = st.radio('추천 방식 선택', ['키워드 기반', '벡터 기반'])
     user_input = st.text_input("원하는 작업을 설명해주세요", placeholder="예: fastapi로 로그인 api 만들고 싶어")
 
+    prompts = load_prompts() # Load prompts once for the tab
+    vector_store = None # Initialize vector_store
+    if prompts: # Check if there are any prompts
+        vector_store = build_vectorstore(prompts) 
+    
     if user_input:
-        prompts = load_prompts()
         if recommend_mode == '키워드 기반':
             results = recommend(extract_tags(user_input), prompts)
         else:
-            results = vector_recommend(user_input, prompts)
+            if vector_store:
+                results = vector_recommend(user_input, vector_store)
+            else:
+                results = [] # No vector store to search
 
         if results:
             st.subheader("🔍 추천 프롬프트")
@@ -195,30 +206,32 @@ with tab2:
         elif sort_by == "레벨순":
             level_order = {"입문": 0, "중급": 1, "고급": 2}
             filtered_prompts = sorted(filtered_prompts, key=lambda x: (level_order.get(x.get("level", ""), 0), x.get("title", "")))
+
+        # 필터링 후 결과 확인
+        if not filtered_prompts and prompts: # prompts가 비어있지 않은데 필터링 결과가 없는 경우
+            st.warning("선택한 조건에 맞는 프롬프트가 없습니다.")
         
-        # 페이지네이션
-        items_per_page = 10
-        total_pages = (len(filtered_prompts) + items_per_page - 1) // items_per_page
-        
-        # 페이지 선택
-        if total_pages > 1:
-            current_page = st.selectbox(
-                "페이지",
-                range(1, total_pages + 1),
-                format_func=lambda x: f"페이지 {x} / {total_pages}"
-            )
-        else:
-            current_page = 1
-        
-        # 현재 페이지의 프롬프트만 표시
-        start_idx = (current_page - 1) * items_per_page
-        end_idx = start_idx + items_per_page
-        current_prompts = filtered_prompts[start_idx:end_idx]
-        
-        # 결과 표시
         st.markdown(f"**총 {len(filtered_prompts)}개의 프롬프트**")
-        
-        for item in current_prompts:
+
+        if filtered_prompts: # 필터링된 결과가 있을 때만 페이지네이션 및 목록 표시
+            # 페이지네이션
+            items_per_page = 10
+            total_pages = (len(filtered_prompts) + items_per_page - 1) // items_per_page
+            
+            current_page = 1
+            if total_pages > 1:
+                current_page = st.selectbox(
+                    "페이지",
+                    range(1, total_pages + 1),
+                    format_func=lambda x: f"페이지 {x} / {total_pages}"
+                )
+            
+            # 현재 페이지의 프롬프트만 표시
+            start_idx = (current_page - 1) * items_per_page
+            end_idx = start_idx + items_per_page
+            current_prompts = filtered_prompts[start_idx:end_idx]
+            
+            for item in current_prompts:
             with st.expander(f"### {item.get('title')}"):
                 col1, col2 = st.columns([2, 1])
                 with col1:
@@ -234,7 +247,7 @@ with tab2:
                     for kw in item.get("keywords", []):
                         st.markdown(f"- `{kw}`")
             st.markdown("---")
-    else:
+    else: # prompts 자체가 비어있는 경우
         st.info("저장된 프롬프트가 없습니다. ➕ '프롬프트 추가' 탭에서 새 프롬프트를 만들어보세요.")
 
 # Tab 3: 프롬프트 추가
