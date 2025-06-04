@@ -1,8 +1,12 @@
 import streamlit as st
 import json
 import os
+import pickle
+import numpy as np
 from uuid import uuid4
-from typing import List, Dict
+from typing import List, Dict, Optional
+from sentence_transformers import SentenceTransformer
+import faiss
 
 # DB 파일 경로: 기존 업그레이드 버전도 지원
 DB_FILE = (
@@ -10,6 +14,15 @@ DB_FILE = (
     if os.path.exists("vibe_prompts_structured.json")
     else "vibe_prompts_structured_upgraded.json"
 )
+
+# 벡터 인덱스 파일 경로
+VECTOR_INDEX_FILE = "prompt_vectors.faiss"
+EMBEDDING_CACHE_FILE = "embeddings_cache.pkl"
+
+# 임베딩 모델 초기화
+@st.cache_resource
+def load_embedding_model():
+    return SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
 
 # Load prompts
 def load_prompts() -> List[Dict]:
@@ -60,11 +73,103 @@ def recommend(tags: Dict[str, List[str]], prompts: List[Dict], top_k: int = 3) -
     scored.sort(reverse=True, key=lambda x: x[0])
     return [item for _, item in scored[:top_k]]
 
-# Placeholder for vector-based recommendation
+# 프롬프트 텍스트를 임베딩으로 변환
+def get_prompt_text(prompt: Dict) -> str:
+    return f"{prompt.get('title', '')} {prompt.get('prompt', '')} {' '.join(prompt.get('keywords', []))}"
+
+# 벡터 인덱스 생성 및 로드
+@st.cache_data
+def build_vector_index(prompts: List[Dict]):
+    model = load_embedding_model()
+    
+    # 캐시된 임베딩이 있는지 확인
+    if os.path.exists(EMBEDDING_CACHE_FILE):
+        with open(EMBEDDING_CACHE_FILE, 'rb') as f:
+            cached_data = pickle.load(f)
+            if len(cached_data['prompts']) == len(prompts):
+                return cached_data['index'], cached_data['embeddings']
+    
+    # 프롬프트 텍스트 생성
+    prompt_texts = [get_prompt_text(prompt) for prompt in prompts]
+    
+    # 임베딩 생성
+    embeddings = model.encode(prompt_texts, convert_to_numpy=True)
+    
+    # FAISS 인덱스 생성
+    dimension = embeddings.shape[1]
+    index = faiss.IndexFlatIP(dimension)  # Inner Product (코사인 유사도)
+    
+    # 정규화 후 인덱스에 추가
+    faiss.normalize_L2(embeddings)
+    index.add(embeddings.astype('float32'))
+    
+    # 캐시 저장
+    cache_data = {
+        'index': index,
+        'embeddings': embeddings,
+        'prompts': prompts
+    }
+    with open(EMBEDDING_CACHE_FILE, 'wb') as f:
+        pickle.dump(cache_data, f)
+    
+    return index, embeddings
+
+# 벡터 기반 추천
 def vector_recommend(user_input: str, prompts: List[Dict], top_k: int = 3) -> List[Dict]:
-    # TODO: 임베딩+유사도 검색 구현 예정
-    tags = extract_tags(user_input)
-    return recommend(tags, prompts, top_k)
+    if not prompts:
+        return []
+    
+    model = load_embedding_model()
+    index, embeddings = build_vector_index(prompts)
+    
+    # 사용자 입력을 임베딩으로 변환
+    query_embedding = model.encode([user_input], convert_to_numpy=True)
+    faiss.normalize_L2(query_embedding)
+    
+    # 유사도 검색
+    scores, indices = index.search(query_embedding.astype('float32'), min(top_k, len(prompts)))
+    
+    # 결과 반환
+    results = []
+    for i, (score, idx) in enumerate(zip(scores[0], indices[0])):
+        if idx < len(prompts):
+            prompt = prompts[idx].copy()
+            prompt['similarity_score'] = float(score)
+            results.append(prompt)
+    
+    return results
+
+# 하이브리드 추천 (키워드 + 벡터)
+def hybrid_recommend(user_input: str, prompts: List[Dict], top_k: int = 3) -> List[Dict]:
+    # 키워드 기반 결과
+    keyword_results = recommend(extract_tags(user_input), prompts, top_k * 2)
+    
+    # 벡터 기반 결과
+    vector_results = vector_recommend(user_input, prompts, top_k * 2)
+    
+    # 결과 결합 및 중복 제거
+    combined = {}
+    
+    # 키워드 결과 (가중치 0.4)
+    for i, item in enumerate(keyword_results):
+        item_id = item.get('id')
+        score = (len(keyword_results) - i) * 0.4
+        combined[item_id] = {'item': item, 'score': score}
+    
+    # 벡터 결과 (가중치 0.6)
+    for i, item in enumerate(vector_results):
+        item_id = item.get('id')
+        vector_score = item.get('similarity_score', 0) * 0.6
+        
+        if item_id in combined:
+            combined[item_id]['score'] += vector_score
+        else:
+            combined[item_id] = {'item': item, 'score': vector_score}
+    
+    # 점수 기준 정렬
+    sorted_results = sorted(combined.values(), key=lambda x: x['score'], reverse=True)
+    
+    return [result['item'] for result in sorted_results[:top_k]]
 
 # Streamlit UI 설정
 st.set_page_config(page_title="Vibe Coding Prompt Recommender", layout="wide")
@@ -86,24 +191,27 @@ with tab1:
             - `llama-cpp로 요약 챗봇 만들기`
         """
         )
-    recommend_mode = st.radio('추천 방식 선택', ['키워드 기반', '벡터 기반'])
+    recommend_mode = st.radio('추천 방식 선택', ['키워드 기반', '벡터 기반', '하이브리드'])
     user_input = st.text_input("원하는 작업을 설명해주세요", placeholder="예: fastapi로 로그인 api 만들고 싶어")
 
     if user_input:
         prompts = load_prompts()
         if recommend_mode == '키워드 기반':
             results = recommend(extract_tags(user_input), prompts)
-        else:
+        elif recommend_mode == '벡터 기반':
             results = vector_recommend(user_input, prompts)
+        else:  # 하이브리드
+            results = hybrid_recommend(user_input, prompts)
 
         if results:
             st.subheader("🔍 추천 프롬프트")
             for item in results:
                 st.markdown(f"**{item.get('title')}**")
                 st.code(item.get("prompt", ""), language="text")
-                st.markdown(
-                    f"분야: `{item.get('category')}` / 도구: `{item.get('tool')}` / 레벨: `{item.get('level')}`"
-                )
+                info_parts = [f"분야: `{item.get('category')}`", f"도구: `{item.get('tool')}`", f"레벨: `{item.get('level')}`"]
+                if 'similarity_score' in item:
+                    info_parts.append(f"유사도: `{item['similarity_score']:.3f}`")
+                st.markdown(" / ".join(info_parts))
                 st.markdown("---")
         else:
             st.warning("적절한 프롬프트를 찾지 못했어요. 입력을 좀 더 구체화해보세요.")
