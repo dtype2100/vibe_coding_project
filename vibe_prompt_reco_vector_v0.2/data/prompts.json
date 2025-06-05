@@ -1,0 +1,1731 @@
+[
+  {
+    "id": "trend-001",
+    "title": "Claude API로 AI 어시스턴트 구축",
+    "prompt": "Anthropic Claude API를 사용해 대화형 AI 어시스턴트를 구축하고, 스트리밍 응답, 컨텍스트 관리, 프롬프트 엔지니어링을 구현해줘.",
+    "category": "AI/LLM",
+    "tool": "Claude API",
+    "framework": "Python",
+    "level": "중급",
+    "keywords": [
+      "Claude",
+      "AI 어시스턴트",
+      "스트리밍",
+      "프롬프트",
+      "API"
+    ]
+  },
+  {
+    "id": "trend-013",
+    "title": "Cursor AI로 코드 생성 도구",
+    "prompt": "Cursor AI API를 활용해 코드 생성 도구를 만들고, 프롬프트 최적화, 코드 리뷰, 자동 리팩토링 기능을 구현해줘.",
+    "category": "AI/LLM",
+    "tool": "Cursor",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Cursor AI",
+      "코드 생성",
+      "프롬프트",
+      "리팩토링",
+      "AI 도구"
+    ]
+  },
+  {
+    "id": "9o8i7u6y-5t4r-3e2w-1q2w-3e4r5t6y7u8i",
+    "title": "LangChain으로 RAG 시스템 구축",
+    "prompt": "LangChain과 FAISS를 사용해 PDF 문서를 기반으로 한 RAG(Retrieval Augmented Generation) 시스템을 구현하고, 사용자 질문에 대한 정확한 답변을 생성해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "RAG",
+      "PDF",
+      "FAISS",
+      "임베딩",
+      "벡터 검색"
+    ]
+  },
+  {
+    "id": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+    "title": "LangChain으로 문서 QA 시스템",
+    "prompt": "LangChain과 FAISS를 사용해 문서 기반 질의응답 시스템을 구현하고, 답변의 출처 표시와 신뢰도 점수도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "QA",
+      "문서",
+      "출처",
+      "신뢰도",
+      "RAG"
+    ]
+  },
+  {
+    "id": "l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7",
+    "title": "LangChain으로 문서 번역기",
+    "prompt": "LangChain을 사용해 여러 언어 간 문서 번역 시스템을 구현하고, 전문 용어 사전과 번역 품질 검증 기능도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "중급",
+    "keywords": [
+      "번역",
+      "다국어",
+      "전문 용어",
+      "품질 검증",
+      "LLM"
+    ]
+  },
+  {
+    "id": "y5z6a7b8-c9d0-e1f2-g3h4-i5j6k7l8m9n0",
+    "title": "LangChain으로 음성 인식",
+    "prompt": "LangChain과 음성 인식 모델을 사용해 음성을 텍스트로 변환하고, 명령어 처리와 대화 기록 관리도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "음성 인식",
+      "STT",
+      "명령어",
+      "대화",
+      "LLM"
+    ]
+  },
+  {
+    "id": "s9t0u1v2-w3x4-y5z6-a7b8-c9d0e1f2g3h4",
+    "title": "LangChain으로 이미지 분석",
+    "prompt": "LangChain과 Vision 모델을 사용해 이미지를 분석하고 설명하는 시스템을 구현하고, 객체 감지와 이미지 캡셔닝도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "이미지 분석",
+      "Vision",
+      "객체 감지",
+      "캡셔닝",
+      "LLM"
+    ]
+  },
+  {
+    "id": "c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4",
+    "title": "LangChain으로 코드 리뷰어",
+    "prompt": "LangChain을 사용해 코드를 분석하고 개선점을 제안하는 리뷰 시스템을 구현하고, 보안 취약점 검사도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "코드 리뷰",
+      "분석",
+      "개선",
+      "보안",
+      "LLM"
+    ]
+  },
+  {
+    "id": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
+    "title": "LangChain으로 코드 생성기",
+    "prompt": "LangChain을 사용해 사용자의 요구사항을 받아 Python 코드를 생성하는 시스템을 구현하고, 코드 검증과 테스트 케이스 생성도 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "고급",
+    "keywords": [
+      "코드 생성",
+      "테스트",
+      "검증",
+      "LLM",
+      "자동화"
+    ]
+  },
+  {
+    "id": "da5cd9cd-e600-49d7-a3ee-322049f21d16",
+    "title": "PDF 요약 챗봇",
+    "prompt": "LangChain과 FAISS를 사용해 사용자가 업로드한 PDF 파일의 내용을 요약할 수 있는 챗봇을 만들고, Streamlit 기반 UI까지 포함해줘.",
+    "category": "AI/LLM",
+    "tool": "LangChain",
+    "framework": "LangChain",
+    "level": "중급",
+    "keywords": [
+      "RAG",
+      "PDF",
+      "FAISS",
+      "임베딩",
+      "벡터 검색",
+      "청킹",
+      "하이브리드 검색"
+    ]
+  },
+  {
+    "id": "trend-003",
+    "title": "Vercel AI SDK로 챗봇 만들기",
+    "prompt": "Vercel AI SDK를 사용해 스트리밍 챗봇을 만들고, 여러 LLM 프로바이더 지원, 함수 호출, UI 컴포넌트를 구현해줘.",
+    "category": "AI/LLM",
+    "tool": "Vercel AI",
+    "framework": "Next.js",
+    "level": "중급",
+    "keywords": [
+      "Vercel AI",
+      "챗봇",
+      "스트리밍",
+      "함수 호출",
+      "LLM"
+    ]
+  },
+  {
+    "id": "45dfbee9-f200-4728-ba14-a59cb4821ee3",
+    "title": "llama-cpp 로컬 모델 실행",
+    "prompt": "llama-cpp-python으로 GGUF 형식의 LLaMA 모델을 CPU에서 실행하고, 사용자 입력을 받아 응답하는 CLI 챗봇 코드를 작성해줘.",
+    "category": "AI/LLM",
+    "tool": "llama-cpp",
+    "framework": "llama-cpp-python",
+    "level": "고급",
+    "keywords": [
+      "llama",
+      "로컬 모델",
+      "GGUF",
+      "CPU",
+      "서빙"
+    ]
+  },
+  {
+    "id": "advanced-002",
+    "title": "실시간 멀티모달 AI 시스템",
+    "prompt": "당신은 AI 리서치 엔지니어입니다. 텍스트, 이미지, 오디오를 통합 처리하는 실시간 AI 시스템을 구축해주세요:\n\n**멀티모달 처리:**\n- 텍스트: Transformer 기반 NLP 모델\n- 이미지: CLIP/BLIP 모델 활용\n- 오디오: Whisper ASR + TTS 통합\n- 비디오: 프레임 추출 및 시계열 분석\n\n**실시간 파이프라인:**\n- 스트리밍 데이터 처리 (Kafka/Pulsar)\n- 모델 서빙 (TensorRT/ONNX)\n- GPU 클러스터 최적화\n- 지연시간 < 100ms 목표\n\n**고급 기능:**\n- Cross-modal attention\n- 동적 모델 라우팅\n- A/B 테스트 프레임워크\n- 모델 성능 모니터링\n\n**확장성 설계:**\n- 수평적 스케일링\n- 모델 버전 관리\n- 배치 인퍼런스 최적화\n- 메모리 효율성\n\n구현 코드와 성능 벤치마크를 포함해주세요.",
+    "category": "AI/LLM",
+    "tool": "PyTorch",
+    "framework": "Transformers",
+    "level": "고급",
+    "keywords": [
+      "멀티모달",
+      "실시간 처리",
+      "스트리밍",
+      "모델 서빙",
+      "GPU 최적화",
+      "지연시간"
+    ]
+  },
+  {
+    "id": "advanced-005",
+    "title": "자율 학습 추천 시스템",
+    "prompt": "당신은 ML 엔지니어입니다. 실시간 피드백으로 자율 학습하는 추천 시스템을 구축해주세요:\n\n**모델 아키텍처:**\n- Multi-Armed Bandit (Thompson Sampling)\n- Deep Learning (DeepFM/Wide&Deep)\n- 협업 필터링 + 콘텐츠 기반\n- Real-time Feature Engineering\n\n**학습 파이프라인:**\n- Online Learning (incremental updates)\n- A/B 테스트 자동화\n- 콜드 스타트 문제 해결\n- 다양성 vs 정확도 밸런싱\n\n**실시간 서빙:**\n- Feature Store (Feast)\n- 모델 서빙 (MLflow/Seldon)\n- 캐싱 전략 (Redis)\n- 지연시간 < 50ms\n\n**평가 및 모니터링:**\n- 오프라인 메트릭 (AUC, NDCG)\n- 온라인 메트릭 (CTR, 전환율)\n- 편향성 감지 및 완화\n- 모델 드리프트 감지\n\n**스케일링 전략:**\n- 분산 학습 (Ray/Dask)\n- 모델 압축\n- 배치 인퍼런스\n- GPU 가속화\n\n전체 MLOps 파이프라인과 모니터링 대시보드를 포함해주세요.",
+    "category": "AI/LLM",
+    "tool": "PyTorch",
+    "framework": "Ray",
+    "level": "고급",
+    "keywords": [
+      "추천 시스템",
+      "온라인 학습",
+      "Multi-Armed Bandit",
+      "Feature Store",
+      "MLOps",
+      "실시간 추론"
+    ]
+  },
+  {
+    "id": "eaccb6fd-96d0-40e4-91a8-63972df8d376",
+    "title": "프롬프트 결과 비교",
+    "prompt": "'우리 제품은 저렴하고 빠릅니다'라는 문장을 직설적, 설득형, 감성형 스타일로 각각 다시 표현해줘.",
+    "category": "AI/LLM",
+    "tool": "ChatGPT",
+    "framework": "OpenAI",
+    "level": "중급",
+    "keywords": [
+      "프롬프트 엔지니어링",
+      "비교",
+      "스타일",
+      "LLM"
+    ]
+  },
+  {
+    "id": "trend-024",
+    "title": "Mojo로 AI 모델 최적화",
+    "prompt": "Mojo 언어를 사용해 Python AI 모델을 최적화하고, SIMD 연산, 병렬 처리, 메모리 효율성, GPU 가속을 구현해줘.",
+    "category": "AI/ML",
+    "tool": "Mojo",
+    "framework": "Mojo",
+    "level": "고급",
+    "keywords": [
+      "Mojo",
+      "AI 최적화",
+      "SIMD",
+      "병렬 처리",
+      "GPU"
+    ]
+  },
+  {
+    "id": "pytorch-001",
+    "title": "PyTorch로 이미지 분류기",
+    "prompt": "PyTorch를 사용해 CNN 기반 이미지 분류기를 만들고, 데이터 증강, 전이 학습, 모델 최적화를 포함해줘.",
+    "category": "AI/ML",
+    "tool": "PyTorch",
+    "framework": "PyTorch",
+    "level": "고급",
+    "keywords": [
+      "PyTorch",
+      "CNN",
+      "이미지 분류",
+      "전이 학습",
+      "데이터 증강"
+    ]
+  },
+  {
+    "id": "tensorflow-001",
+    "title": "TensorFlow로 시계열 예측",
+    "prompt": "TensorFlow를 사용해 LSTM 기반 시계열 예측 모델을 만들고, 데이터 전처리, 하이퍼파라미터 튜닝, 모델 평가를 포함해줘.",
+    "category": "AI/ML",
+    "tool": "TensorFlow",
+    "framework": "TensorFlow",
+    "level": "고급",
+    "keywords": [
+      "TensorFlow",
+      "LSTM",
+      "시계열",
+      "예측",
+      "하이퍼파라미터"
+    ]
+  },
+  {
+    "id": "ansible-001",
+    "title": "Ansible로 서버 자동화",
+    "prompt": "Ansible을 사용해 서버 프로비저닝을 자동화하고, 플레이북 작성, 롤 생성, 인벤토리 관리, 시크릿 관리를 구현해줘.",
+    "category": "DevOps",
+    "tool": "Ansible",
+    "framework": "Ansible",
+    "level": "중급",
+    "keywords": [
+      "Ansible",
+      "자동화",
+      "플레이북",
+      "프로비저닝",
+      "인프라"
+    ]
+  },
+  {
+    "id": "2p3o4i5u-6y7t-8r9e-0w1q-2w3e4r5t6y7u",
+    "title": "Docker Compose로 개발 환경 구성",
+    "prompt": "FastAPI 백엔드와 React 프론트엔드를 위한 Docker Compose 설정을 만들고, 개발 환경에서의 핫 리로딩과 디버깅 설정도 포함해줘.",
+    "category": "DevOps",
+    "tool": "Docker",
+    "framework": "Docker Compose",
+    "level": "중급",
+    "keywords": [
+      "Docker Compose",
+      "개발 환경",
+      "핫 리로딩",
+      "디버깅",
+      "멀티 컨테이너"
+    ]
+  },
+  {
+    "id": "e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6",
+    "title": "Docker로 마이크로서비스 배포",
+    "prompt": "Docker와 Docker Compose를 사용해 마이크로서비스 아키텍처를 구성하고, 서비스 간 통신과 로깅, 모니터링도 설정해줘.",
+    "category": "DevOps",
+    "tool": "Docker",
+    "framework": "Docker",
+    "level": "고급",
+    "keywords": [
+      "마이크로서비스",
+      "Docker Compose",
+      "통신",
+      "로깅",
+      "모니터링"
+    ]
+  },
+  {
+    "id": "e10f67a8-3611-4897-b19f-dd1ea353ae50",
+    "title": "FastAPI Dockerfile 생성",
+    "prompt": "FastAPI 애플리케이션을 배포하기 위한 Dockerfile을 생성하고, poetry 환경과 Uvicorn 실행 커맨드를 포함해줘.",
+    "category": "DevOps",
+    "tool": "Docker",
+    "framework": "FastAPI",
+    "level": "중급",
+    "keywords": [
+      "Dockerfile",
+      "FastAPI",
+      "배포",
+      "poetry"
+    ]
+  },
+  {
+    "id": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
+    "title": "GitHub Actions로 자동 배포",
+    "prompt": "GitHub Actions를 사용해 AWS에 자동 배포 파이프라인을 구축하고, 테스트와 보안 검사도 포함해줘.",
+    "category": "DevOps",
+    "tool": "GitHub Actions",
+    "framework": "GitHub Actions",
+    "level": "고급",
+    "keywords": [
+      "배포",
+      "AWS",
+      "CI/CD",
+      "보안",
+      "자동화"
+    ]
+  },
+  {
+    "id": "jenkins-001",
+    "title": "Jenkins로 CI/CD 파이프라인",
+    "prompt": "Jenkins를 사용해 CI/CD 파이프라인을 구축하고, 빌드, 테스트, 배포 자동화, 알림 설정을 구현해줘.",
+    "category": "DevOps",
+    "tool": "Jenkins",
+    "framework": "Jenkins",
+    "level": "중급",
+    "keywords": [
+      "Jenkins",
+      "CI/CD",
+      "파이프라인",
+      "자동화",
+      "배포"
+    ]
+  },
+  {
+    "id": "p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1",
+    "title": "Kubernetes 배포 구성",
+    "prompt": "Kubernetes로 마이크로서비스 아키텍처를 배포하고, 서비스 디스커버리와 로드밸런싱, 오토스케일링도 설정해줘.",
+    "category": "DevOps",
+    "tool": "Kubernetes",
+    "framework": "Kubernetes",
+    "level": "고급",
+    "keywords": [
+      "K8s",
+      "마이크로서비스",
+      "디스커버리",
+      "로드밸런싱",
+      "스케일링"
+    ]
+  },
+  {
+    "id": "nginx-001",
+    "title": "Nginx로 리버스 프록시 구성",
+    "prompt": "Nginx를 사용해 리버스 프록시를 구성하고, 로드밸런싱, SSL 설정, 캐싱, 압축을 구현해줘.",
+    "category": "DevOps",
+    "tool": "Nginx",
+    "framework": "Nginx",
+    "level": "중급",
+    "keywords": [
+      "Nginx",
+      "리버스 프록시",
+      "로드밸런싱",
+      "SSL",
+      "캐싱"
+    ]
+  },
+  {
+    "id": "prometheus-001",
+    "title": "Prometheus로 모니터링 시스템",
+    "prompt": "Prometheus와 Grafana를 사용해 모니터링 시스템을 구축하고, 메트릭 수집, 알림 규칙, 대시보드를 구성해줘.",
+    "category": "DevOps",
+    "tool": "Prometheus",
+    "framework": "Prometheus",
+    "level": "중급",
+    "keywords": [
+      "Prometheus",
+      "모니터링",
+      "Grafana",
+      "메트릭",
+      "알림"
+    ]
+  },
+  {
+    "id": "1ac396f6-1d52-4808-9d0d-d423cfa0dc33",
+    "title": "React용 GitHub Actions CI",
+    "prompt": "React 프로젝트에서 커밋 또는 PR 시 자동 빌드와 테스트를 실행하는 GitHub Actions 워크플로우 yml 파일을 만들어줘.",
+    "category": "DevOps",
+    "tool": "GitHub Actions",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "CI",
+      "React",
+      "배포",
+      "자동화"
+    ]
+  },
+  {
+    "id": "o5p6q7r8-s9t0-u1v2-w3x4-y5z6a7b8c9d0",
+    "title": "Terraform으로 인프라 구성",
+    "prompt": "Terraform을 사용해 AWS 인프라를 코드로 관리하고, 모듈화와 상태 관리, 보안 설정도 포함해줘.",
+    "category": "DevOps",
+    "tool": "Terraform",
+    "framework": "Terraform",
+    "level": "고급",
+    "keywords": [
+      "IaC",
+      "AWS",
+      "모듈",
+      "상태 관리",
+      "보안"
+    ]
+  },
+  {
+    "id": "advanced-001",
+    "title": "마이크로서비스 API 게이트웨이",
+    "prompt": "당신은 시스템 아키텍트입니다. Kong/Envoy를 사용한 고성능 API 게이트웨이를 설계해주세요:\n\n**아키텍처 요구사항:**\n- 마이크로서비스 라우팅 및 로드밸런싱\n- JWT 기반 인증/인가\n- Rate limiting 및 throttling\n- Circuit breaker 패턴\n\n**보안 및 모니터링:**\n- SSL/TLS 종료\n- 요청/응답 로깅\n- 메트릭 수집 (Prometheus)\n- 분산 추적 (Jaeger/Zipkin)\n\n**성능 최적화:**\n- 캐싱 전략\n- 압축 최적화\n- 커넥션 풀링\n- 비동기 처리\n\n**운영 관리:**\n- Health check 엔드포인트\n- Blue-green 배포\n- 동적 설정 업데이트\n- 장애 복구 전략\n\n설정 파일과 모니터링 대시보드도 포함해주세요.",
+    "category": "DevOps",
+    "tool": "Kong",
+    "framework": "Kong/Envoy",
+    "level": "고급",
+    "keywords": [
+      "API 게이트웨이",
+      "마이크로서비스",
+      "로드밸런싱",
+      "Circuit breaker",
+      "Rate limiting",
+      "분산 추적"
+    ]
+  },
+  {
+    "id": "trend-025",
+    "title": "Biome으로 코드 품질 관리",
+    "prompt": "Biome (구 Rome)을 사용해 JavaScript/TypeScript 프로젝트의 포맷팅, 린팅, 번들링을 통합 관리하고, CI/CD에 통합해줘.",
+    "category": "개발도구",
+    "tool": "Biome",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "Biome",
+      "린팅",
+      "포맷팅",
+      "코드 품질",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": "elasticsearch-001",
+    "title": "Elasticsearch로 검색 엔진",
+    "prompt": "Elasticsearch를 사용해 전문 검색 엔진을 구축하고, 한글 형태소 분석, 자동완성, 동의어 처리, 검색 랭킹을 구현해줘.",
+    "category": "검색",
+    "tool": "Elasticsearch",
+    "framework": "Elasticsearch",
+    "level": "고급",
+    "keywords": [
+      "Elasticsearch",
+      "검색",
+      "형태소 분석",
+      "자동완성",
+      "랭킹"
+    ]
+  },
+  {
+    "id": "unity-001",
+    "title": "Unity로 2D 플랫포머 게임",
+    "prompt": "Unity를 사용해 2D 플랫포머 게임을 만들고, 캐릭터 컨트롤, 충돌 감지, 점수 시스템, 레벨 디자인을 구현해줘.",
+    "category": "게임개발",
+    "tool": "Unity",
+    "framework": "Unity",
+    "level": "중급",
+    "keywords": [
+      "Unity",
+      "2D 게임",
+      "플랫포머",
+      "충돌 감지",
+      "게임 개발"
+    ]
+  },
+  {
+    "id": "unreal-001",
+    "title": "Unreal Engine으로 FPS 게임",
+    "prompt": "Unreal Engine을 사용해 FPS 게임 프로토타입을 만들고, 캐릭터 이동, 총기 시스템, AI 적, 네트워킹을 구현해줘.",
+    "category": "게임개발",
+    "tool": "Unreal",
+    "framework": "Unreal Engine",
+    "level": "고급",
+    "keywords": [
+      "Unreal Engine",
+      "FPS",
+      "게임 개발",
+      "AI",
+      "네트워킹"
+    ]
+  },
+  {
+    "id": "beginner-002",
+    "title": "Python으로 BMI 계산기",
+    "prompt": "Python으로 키와 몸무게를 입력받아 BMI를 계산하고, 비만도를 판정하는 프로그램을 작성해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "BMI",
+      "계산",
+      "조건문",
+      "입력",
+      "판정"
+    ]
+  },
+  {
+    "id": "n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9",
+    "title": "Python으로 간단한 게임",
+    "prompt": "Python으로 숫자 맞추기 게임을 만들고, 점수 기록과 난이도 조절 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "게임",
+      "난수",
+      "점수",
+      "기초",
+      "입력"
+    ]
+  },
+  {
+    "id": "3e4r5t-6y7u-8i9o-0p1q-2w3e4r5t6y7u",
+    "title": "Python으로 간단한 계산기",
+    "prompt": "Python으로 기본적인 사칙연산이 가능한 계산기를 만들고, 사용자 입력을 받아 결과를 출력하는 콘솔 프로그램을 작성해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "계산기",
+      "사칙연산",
+      "입력",
+      "출력",
+      "기초"
+    ]
+  },
+  {
+    "id": "f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7",
+    "title": "Python으로 간단한 웹 서버",
+    "prompt": "Python으로 기본적인 HTTP 웹 서버를 구현하고, 정적 파일 제공과 라우팅, 에러 처리 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "웹 서버",
+      "HTTP",
+      "라우팅",
+      "정적 파일",
+      "기초"
+    ]
+  },
+  {
+    "id": "beginner-001",
+    "title": "Python으로 구구단 출력",
+    "prompt": "Python으로 구구단을 출력하는 프로그램을 만들고, 사용자가 원하는 단을 선택할 수 있도록 해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "구구단",
+      "반복문",
+      "입력",
+      "출력",
+      "기초"
+    ]
+  },
+  {
+    "id": "z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1",
+    "title": "Python으로 데이터베이스 관리자",
+    "prompt": "Python으로 SQLite 데이터베이스를 관리하는 프로그램을 만들고, CRUD 작업과 백업, 복원 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "데이터베이스",
+      "SQLite",
+      "CRUD",
+      "백업",
+      "관리"
+    ]
+  },
+  {
+    "id": "beginner-003",
+    "title": "Python으로 로또 번호 생성기",
+    "prompt": "Python으로 1부터 45까지의 숫자 중 6개를 랜덤으로 선택하는 로또 번호 생성기를 만들어줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "로또",
+      "랜덤",
+      "리스트",
+      "정렬",
+      "기초"
+    ]
+  },
+  {
+    "id": "t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5",
+    "title": "Python으로 웹 스크래퍼",
+    "prompt": "Python으로 웹 스크래핑 프로그램을 만들고, 데이터 추출과 저장, 에러 처리, 로깅 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "웹 스크래핑",
+      "데이터 수집",
+      "파싱",
+      "저장",
+      "로깅"
+    ]
+  },
+  {
+    "id": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
+    "title": "Python으로 파일 관리자",
+    "prompt": "Python으로 간단한 파일 관리자를 만들고, 파일 복사/이동/삭제 기능과 디렉토리 탐색 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "파일 관리",
+      "파일 시스템",
+      "입출력",
+      "기초",
+      "CLI"
+    ]
+  },
+  {
+    "id": "k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6",
+    "title": "Python으로 할 일 관리자",
+    "prompt": "Python으로 할 일을 추가/수정/삭제할 수 있는 콘솔 프로그램을 만들고, 마감일 설정과 우선순위 지정 기능도 포함해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "할 일 관리",
+      "CRUD",
+      "콘솔",
+      "기초",
+      "입력"
+    ]
+  },
+  {
+    "id": "4fc314e3-5356-4b08-a33d-5bf64c3f996c",
+    "title": "짝수/홀수 판별기",
+    "prompt": "Python으로 사용자로부터 숫자를 입력받고 해당 숫자가 짝수인지 홀수인지 판별하는 콘솔 프로그램을 작성해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "짝수",
+      "홀수",
+      "입문자",
+      "제어문"
+    ]
+  },
+  {
+    "id": "trend-019",
+    "title": "Tauri 2로 데스크톱 앱",
+    "prompt": "Tauri 2를 사용해 크로스 플랫폼 데스크톱 앱을 만들고, 시스템 트레이, 파일 시스템 접근, 자동 업데이트를 구현해줘.",
+    "category": "데스크톱",
+    "tool": "Tauri",
+    "framework": "Tauri",
+    "level": "고급",
+    "keywords": [
+      "Tauri 2",
+      "데스크톱",
+      "크로스 플랫폼",
+      "시스템 트레이",
+      "자동 업데이트"
+    ]
+  },
+  {
+    "id": "trend-017",
+    "title": "Drizzle ORM으로 타입세이프 DB",
+    "prompt": "Drizzle ORM을 사용해 타입세이프 데이터베이스 레이어를 구축하고, 마이그레이션, 관계 정의, 쿼리 빌더를 구현해줘.",
+    "category": "데이터베이스",
+    "tool": "Drizzle",
+    "framework": "Drizzle ORM",
+    "level": "중급",
+    "keywords": [
+      "Drizzle ORM",
+      "타입세이프",
+      "마이그레이션",
+      "쿼리 빌더",
+      "ORM"
+    ]
+  },
+  {
+    "id": "mongodb-001",
+    "title": "MongoDB로 실시간 채팅 백엔드",
+    "prompt": "MongoDB를 사용해 실시간 채팅 백엔드를 구축하고, 메시지 저장, 사용자 관리, 채널 기능, 읽음 표시를 구현해줘.",
+    "category": "데이터베이스",
+    "tool": "MongoDB",
+    "framework": "Express",
+    "level": "중급",
+    "keywords": [
+      "MongoDB",
+      "채팅",
+      "실시간",
+      "NoSQL",
+      "메시지"
+    ]
+  },
+  {
+    "id": "redis-001",
+    "title": "Redis로 캐싱 시스템 구현",
+    "prompt": "Redis를 사용해 고성능 캐싱 시스템을 구현하고, 캐시 무효화, TTL 관리, 분산 캐싱, 모니터링을 포함해줘.",
+    "category": "데이터베이스",
+    "tool": "Redis",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "Redis",
+      "캐싱",
+      "TTL",
+      "분산 캐싱",
+      "성능"
+    ]
+  },
+  {
+    "id": "trend-010",
+    "title": "Turso로 엣지 데이터베이스",
+    "prompt": "Turso (libSQL)를 사용해 엣지 데이터베이스를 구축하고, 멀티 리전 복제, 임베디드 레플리카, 서버리스 통합을 구현해줘.",
+    "category": "데이터베이스",
+    "tool": "Turso",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Turso",
+      "엣지 데이터베이스",
+      "libSQL",
+      "멀티 리전",
+      "서버리스"
+    ]
+  },
+  {
+    "id": "8i9o0p-1q2w-3e4r-5t6y-7u8i9o0p1q2w",
+    "title": "Pandas로 데이터 전처리 파이프라인",
+    "prompt": "Pandas를 사용해 CSV 데이터를 전처리하는 파이프라인을 구현하고, 결측치 처리, 이상치 제거, 특성 스케일링 등의 기능을 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Pandas",
+    "framework": "Python",
+    "level": "중급",
+    "keywords": [
+      "데이터 전처리",
+      "결측치",
+      "이상치",
+      "스케일링",
+      "파이프라인"
+    ]
+  },
+  {
+    "id": "d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5",
+    "title": "Pandas로 데이터 품질 검사",
+    "prompt": "Pandas를 사용해 데이터 품질을 검사하는 시스템을 구현하고, 이상치 탐지와 데이터 정제, 보고서 생성도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Pandas",
+    "framework": "Python",
+    "level": "중급",
+    "keywords": [
+      "데이터 품질",
+      "이상치",
+      "정제",
+      "검사",
+      "보고서"
+    ]
+  },
+  {
+    "id": "u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6",
+    "title": "Pandas로 시계열 분석",
+    "prompt": "Pandas를 사용해 시계열 데이터를 분석하고, 이동평균, 계절성 분석, 예측 모델링 기능도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Pandas",
+    "framework": "Python",
+    "level": "고급",
+    "keywords": [
+      "시계열",
+      "이동평균",
+      "계절성",
+      "예측",
+      "분석"
+    ]
+  },
+  {
+    "id": "m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8",
+    "title": "Plotly로 인터랙티브 차트",
+    "prompt": "Plotly를 사용해 인터랙티브한 데이터 시각화 차트를 만들고, 필터링과 데이터 내보내기 기능도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Plotly",
+    "framework": "Python",
+    "level": "중급",
+    "keywords": [
+      "인터랙티브",
+      "차트",
+      "시각화",
+      "필터링",
+      "데이터"
+    ]
+  },
+  {
+    "id": "62d774d2-5c03-4378-aeea-2833bcda5b8d",
+    "title": "Streamlit로 CSV 시각화 앱 만들기",
+    "prompt": "사용자가 업로드한 CSV 파일을 pandas로 로드한 후, Plotly로 시각화해주는 Streamlit 앱 코드를 작성해줘.",
+    "category": "데이터분석",
+    "tool": "Streamlit",
+    "framework": "Streamlit",
+    "level": "중급",
+    "keywords": [
+      "CSV",
+      "시각화",
+      "Streamlit",
+      "Plotly"
+    ]
+  },
+  {
+    "id": "v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7",
+    "title": "Streamlit으로 NLP 대시보드",
+    "prompt": "Streamlit으로 텍스트 데이터를 분석하는 대시보드를 만들고, 감정 분석, 키워드 추출, 워드클라우드 시각화도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Streamlit",
+    "framework": "Streamlit",
+    "level": "중급",
+    "keywords": [
+      "NLP",
+      "감정 분석",
+      "키워드",
+      "워드클라우드",
+      "시각화"
+    ]
+  },
+  {
+    "id": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+    "title": "Streamlit으로 대시보드 만들기",
+    "prompt": "Streamlit으로 실시간 데이터를 시각화하는 대시보드를 만들고, 필터링과 다운로드 기능도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Streamlit",
+    "framework": "Streamlit",
+    "level": "중급",
+    "keywords": [
+      "대시보드",
+      "시각화",
+      "실시간",
+      "필터링",
+      "데이터"
+    ]
+  },
+  {
+    "id": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5",
+    "title": "Streamlit으로 머신러닝 앱",
+    "prompt": "Streamlit으로 머신러닝 모델을 학습하고 예측할 수 있는 앱을 만들고, 모델 성능 시각화와 하이퍼파라미터 튜닝 기능도 포함해줘.",
+    "category": "데이터분석",
+    "tool": "Streamlit",
+    "framework": "Streamlit",
+    "level": "고급",
+    "keywords": [
+      "머신러닝",
+      "모델 학습",
+      "시각화",
+      "튜닝",
+      "예측"
+    ]
+  },
+  {
+    "id": "airflow-001",
+    "title": "Airflow로 데이터 파이프라인",
+    "prompt": "Apache Airflow를 사용해 데이터 파이프라인을 구축하고, DAG 설계, 스케줄링, 에러 처리, 알림 기능을 구현해줘.",
+    "category": "데이터엔지니어링",
+    "tool": "Airflow",
+    "framework": "Airflow",
+    "level": "고급",
+    "keywords": [
+      "Airflow",
+      "데이터 파이프라인",
+      "DAG",
+      "스케줄링",
+      "워크플로우"
+    ]
+  },
+  {
+    "id": "kafka-001",
+    "title": "Kafka로 이벤트 스트리밍",
+    "prompt": "Apache Kafka를 사용해 이벤트 스트리밍 시스템을 구축하고, 프로듀서/컨슈머, 파티셔닝, 오프셋 관리를 구현해줘.",
+    "category": "데이터엔지니어링",
+    "tool": "Kafka",
+    "framework": "Kafka",
+    "level": "고급",
+    "keywords": [
+      "Kafka",
+      "이벤트 스트리밍",
+      "프로듀서",
+      "컨슈머",
+      "파티셔닝"
+    ]
+  },
+  {
+    "id": "rabbitmq-001",
+    "title": "RabbitMQ로 메시지 큐 시스템",
+    "prompt": "RabbitMQ를 사용해 메시지 큐 시스템을 구축하고, 익스체인지, 라우팅, 데드레터 큐, 클러스터링을 구현해줘.",
+    "category": "메시징",
+    "tool": "RabbitMQ",
+    "framework": "RabbitMQ",
+    "level": "중급",
+    "keywords": [
+      "RabbitMQ",
+      "메시지 큐",
+      "익스체인지",
+      "라우팅",
+      "비동기"
+    ]
+  },
+  {
+    "id": "trend-023",
+    "title": "Expo 50으로 React Native 앱",
+    "prompt": "Expo SDK 50을 사용해 React Native 앱을 개발하고, EAS Build, 로컬 모듈, 네이티브 확장, OTA 업데이트를 구현해줘.",
+    "category": "모바일",
+    "tool": "Expo",
+    "framework": "React Native",
+    "level": "중급",
+    "keywords": [
+      "Expo 50",
+      "React Native",
+      "EAS Build",
+      "OTA",
+      "네이티브"
+    ]
+  },
+  {
+    "id": "flutter-001",
+    "title": "Flutter로 날씨 앱 개발",
+    "prompt": "Flutter를 사용해 날씨 앱을 개발하고, API 연동, 위치 권한, 애니메이션, 다크모드를 구현해줘.",
+    "category": "모바일",
+    "tool": "Flutter",
+    "framework": "Flutter",
+    "level": "중급",
+    "keywords": [
+      "Flutter",
+      "날씨",
+      "API",
+      "위치",
+      "애니메이션"
+    ]
+  },
+  {
+    "id": "trend-004",
+    "title": "Bun으로 고성능 서버 구축",
+    "prompt": "Bun 런타임을 사용해 고성능 HTTP 서버를 구축하고, WebSocket, 파일 처리, 타입스크립트 지원을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Bun",
+    "framework": "Bun",
+    "level": "중급",
+    "keywords": [
+      "Bun",
+      "고성능",
+      "WebSocket",
+      "타입스크립트",
+      "런타임"
+    ]
+  },
+  {
+    "id": "trend-008",
+    "title": "Deno 2로 모던 백엔드 API",
+    "prompt": "Deno 2를 사용해 타입세이프 백엔드 API를 구축하고, KV 스토어, Deno Deploy, 네이티브 HTTP 서버를 활용해줘.",
+    "category": "백엔드",
+    "tool": "Deno",
+    "framework": "Deno",
+    "level": "중급",
+    "keywords": [
+      "Deno 2",
+      "KV 스토어",
+      "Deno Deploy",
+      "타입세이프",
+      "백엔드"
+    ]
+  },
+  {
+    "id": "django-001",
+    "title": "Django로 블로그 플랫폼 만들기",
+    "prompt": "Django를 사용해 블로그 플랫폼을 만들고, 사용자 인증, 댓글 시스템, 태그 기능, 검색 기능을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Django",
+    "framework": "Django",
+    "level": "중급",
+    "keywords": [
+      "블로그",
+      "Django",
+      "인증",
+      "댓글",
+      "검색"
+    ]
+  },
+  {
+    "id": "5012e923-45b7-4c97-8725-c47e68db88f6",
+    "title": "FastAPI로 JWT 로그인 API 만들기",
+    "prompt": "FastAPI로 이메일과 비밀번호를 받아 JWT 토큰을 반환하는 로그인 API를 구현하고, Pydantic 모델과 에러 핸들링도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "중급",
+    "keywords": [
+      "JWT",
+      "인증",
+      "로그인",
+      "백엔드",
+      "보안"
+    ]
+  },
+  {
+    "id": "x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9",
+    "title": "FastAPI로 실시간 게임 서버",
+    "prompt": "FastAPI와 WebSocket을 사용해 실시간 멀티플레이어 게임 서버를 구현하고, 게임 상태 동기화와 플레이어 매칭도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "고급",
+    "keywords": [
+      "게임 서버",
+      "WebSocket",
+      "실시간",
+      "동기화",
+      "매칭"
+    ]
+  },
+  {
+    "id": "b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3",
+    "title": "FastAPI로 실시간 대시보드",
+    "prompt": "FastAPI와 WebSocket을 사용해 실시간 데이터를 표시하는 대시보드를 구현하고, 데이터 필터링과 알림 기능도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "고급",
+    "keywords": [
+      "실시간",
+      "대시보드",
+      "WebSocket",
+      "필터링",
+      "알림"
+    ]
+  },
+  {
+    "id": "r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3",
+    "title": "FastAPI로 실시간 알림",
+    "prompt": "FastAPI와 WebSocket을 사용해 실시간 알림 시스템을 구현하고, 알림 저장과 읽음 상태 관리, 푸시 알림도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "중급",
+    "keywords": [
+      "실시간",
+      "알림",
+      "WebSocket",
+      "푸시",
+      "상태 관리"
+    ]
+  },
+  {
+    "id": "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+    "title": "FastAPI로 실시간 채팅 구현",
+    "prompt": "FastAPI와 WebSocket을 사용해 실시간 채팅 기능을 구현하고, 사용자 인증과 메시지 저장 기능도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "고급",
+    "keywords": [
+      "WebSocket",
+      "실시간",
+      "채팅",
+      "인증",
+      "메시지"
+    ]
+  },
+  {
+    "id": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    "title": "FastAPI로 이메일 발송 시스템",
+    "prompt": "FastAPI로 이메일 발송 시스템을 구현하고, HTML 템플릿과 첨부파일 지원, 발송 상태 모니터링 기능도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "중급",
+    "keywords": [
+      "이메일",
+      "템플릿",
+      "첨부파일",
+      "모니터링",
+      "비동기"
+    ]
+  },
+  {
+    "id": "3a4b5c6d-7e8f-9g0h-1i2j-3k4l5m6n7o8p",
+    "title": "FastAPI로 파일 업로드 API 구현",
+    "prompt": "FastAPI로 대용량 파일 업로드를 처리하는 API를 구현하고, 진행률 표시와 에러 핸들링, 파일 유효성 검사도 포함해줘.",
+    "category": "백엔드",
+    "tool": "FastAPI",
+    "framework": "FastAPI",
+    "level": "중급",
+    "keywords": [
+      "파일 업로드",
+      "비동기",
+      "진행률",
+      "유효성 검사",
+      "백엔드"
+    ]
+  },
+  {
+    "id": "golang-001",
+    "title": "Go로 마이크로서비스 구축",
+    "prompt": "Go를 사용해 마이크로서비스를 구축하고, gRPC 통신, 서비스 디스커버리, 헬스 체크, 로깅을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Go",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Go",
+      "마이크로서비스",
+      "gRPC",
+      "서비스 디스커버리",
+      "헬스 체크"
+    ]
+  },
+  {
+    "id": "graphql-001",
+    "title": "GraphQL API 서버 구축",
+    "prompt": "Apollo Server를 사용해 GraphQL API를 구축하고, 스키마 설계, 리졸버, 인증, 페이지네이션을 구현해줘.",
+    "category": "백엔드",
+    "tool": "GraphQL",
+    "framework": "Apollo",
+    "level": "중급",
+    "keywords": [
+      "GraphQL",
+      "Apollo",
+      "스키마",
+      "리졸버",
+      "페이지네이션"
+    ]
+  },
+  {
+    "id": "trend-014",
+    "title": "Hono로 엣지 워커 API",
+    "prompt": "Hono 프레임워크를 사용해 Cloudflare Workers에서 실행되는 API를 만들고, 미들웨어, 라우팅, 타입 안정성을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Hono",
+    "framework": "Hono",
+    "level": "중급",
+    "keywords": [
+      "Hono",
+      "Cloudflare Workers",
+      "엣지",
+      "미들웨어",
+      "타입 안정성"
+    ]
+  },
+  {
+    "id": "spring-001",
+    "title": "Spring Boot로 REST API 구축",
+    "prompt": "Spring Boot를 사용해 RESTful API를 구축하고, JPA를 이용한 데이터베이스 연동, 유효성 검사, 예외 처리를 포함해줘.",
+    "category": "백엔드",
+    "tool": "Spring Boot",
+    "framework": "Spring",
+    "level": "중급",
+    "keywords": [
+      "REST API",
+      "JPA",
+      "유효성 검사",
+      "예외 처리",
+      "Spring Boot"
+    ]
+  },
+  {
+    "id": "advanced-003",
+    "title": "이벤트 드리븐 마이크로서비스",
+    "prompt": "당신은 소프트웨어 아키텍트입니다. 이벤트 소싱과 CQRS 패턴을 적용한 마이크로서비스를 설계해주세요:\n\n**아키텍처 패턴:**\n- Event Sourcing: 모든 상태 변경을 이벤트로 저장\n- CQRS: 읽기/쓰기 모델 분리\n- Saga 패턴: 분산 트랜잭션 관리\n- Domain-Driven Design 적용\n\n**기술 스택:**\n- 이벤트 스토어: EventStore/Apache Kafka\n- 메시지 브로커: RabbitMQ/Apache Pulsar\n- 데이터베이스: PostgreSQL + Redis\n- API: GraphQL + REST\n\n**고급 기능:**\n- 이벤트 리플레이 및 스냅샷\n- Outbox 패턴\n- 분산 락\n- 최종 일관성 보장\n\n**모니터링 및 관찰성:**\n- 이벤트 추적\n- 비즈니스 메트릭\n- 장애 격리\n- 복구 전략\n\n완전한 구현 예제와 테스트 전략을 포함해주세요.",
+    "category": "백엔드",
+    "tool": "Node.js",
+    "framework": "NestJS",
+    "level": "고급",
+    "keywords": [
+      "이벤트 소싱",
+      "CQRS",
+      "Saga 패턴",
+      "마이크로서비스",
+      "분산 시스템",
+      "DDD"
+    ]
+  },
+  {
+    "id": "spark-001",
+    "title": "Apache Spark로 빅데이터 처리",
+    "prompt": "Apache Spark를 사용해 대용량 데이터를 처리하고, RDD/DataFrame 작업, 스트리밍 처리, 머신러닝을 구현해줘.",
+    "category": "빅데이터",
+    "tool": "Spark",
+    "framework": "Spark",
+    "level": "고급",
+    "keywords": [
+      "Spark",
+      "빅데이터",
+      "DataFrame",
+      "스트리밍",
+      "분산 처리"
+    ]
+  },
+  {
+    "id": "hadoop-001",
+    "title": "Hadoop으로 분산 저장 시스템",
+    "prompt": "Hadoop HDFS를 사용해 분산 파일 시스템을 구축하고, MapReduce 작업, 데이터 복제, 장애 복구를 구현해줘.",
+    "category": "빅데이터",
+    "tool": "Hadoop",
+    "framework": "Hadoop",
+    "level": "고급",
+    "keywords": [
+      "Hadoop",
+      "HDFS",
+      "MapReduce",
+      "분산 저장",
+      "빅데이터"
+    ]
+  },
+  {
+    "id": "trend-016",
+    "title": "Vite 5로 빌드 최적화",
+    "prompt": "Vite 5를 사용해 프론트엔드 빌드를 최적화하고, 플러그인 개발, SSR 지원, 라이브러리 모드, 성능 프로파일링을 구현해줘.",
+    "category": "빌드도구",
+    "tool": "Vite",
+    "framework": "Vite",
+    "level": "중급",
+    "keywords": [
+      "Vite 5",
+      "빌드 최적화",
+      "플러그인",
+      "SSR",
+      "성능"
+    ]
+  },
+  {
+    "id": "rust-001",
+    "title": "Rust로 CLI 도구 만들기",
+    "prompt": "Rust로 파일 시스템을 관리하는 CLI 도구를 만들고, 에러 처리, 비동기 작업, 크로스 플랫폼 지원을 포함해줘.",
+    "category": "시스템프로그래밍",
+    "tool": "Rust",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Rust",
+      "CLI",
+      "파일 시스템",
+      "비동기",
+      "크로스 플랫폼"
+    ]
+  },
+  {
+    "id": "trend-021",
+    "title": "Zig으로 시스템 프로그래밍",
+    "prompt": "Zig 언어를 사용해 메모리 안전한 시스템 프로그램을 작성하고, 컴파일 타임 실행, 에러 처리, C 인터롭을 구현해줘.",
+    "category": "시스템프로그래밍",
+    "tool": "Zig",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Zig",
+      "시스템 프로그래밍",
+      "메모리 안전",
+      "컴파일 타임",
+      "C 인터롭"
+    ]
+  },
+  {
+    "id": "trend-011",
+    "title": "Rust WASM으로 웹 앱 최적화",
+    "prompt": "Rust와 WebAssembly를 사용해 웹 앱의 핵심 로직을 최적화하고, JavaScript 인터페이스, 메모리 관리, 성능 측정을 구현해줘.",
+    "category": "웹어셈블리",
+    "tool": "Rust",
+    "framework": "wasm-bindgen",
+    "level": "고급",
+    "keywords": [
+      "Rust",
+      "WebAssembly",
+      "WASM",
+      "성능 최적화",
+      "메모리 관리"
+    ]
+  },
+  {
+    "id": "aws-001",
+    "title": "AWS Lambda로 서버리스 API",
+    "prompt": "AWS Lambda와 API Gateway를 사용해 서버리스 API를 구축하고, DynamoDB 연동, 인증, 에러 처리를 구현해줘.",
+    "category": "클라우드",
+    "tool": "AWS",
+    "framework": "Serverless",
+    "level": "중급",
+    "keywords": [
+      "AWS Lambda",
+      "서버리스",
+      "API Gateway",
+      "DynamoDB",
+      "클라우드"
+    ]
+  },
+  {
+    "id": "azure-001",
+    "title": "Azure Functions로 이벤트 처리",
+    "prompt": "Azure Functions를 사용해 이벤트 기반 처리 시스템을 구축하고, Blob Storage 트리거, 큐 처리, 타이머 작업을 구현해줘.",
+    "category": "클라우드",
+    "tool": "Azure",
+    "framework": "Azure Functions",
+    "level": "중급",
+    "keywords": [
+      "Azure Functions",
+      "이벤트",
+      "트리거",
+      "서버리스",
+      "클라우드"
+    ]
+  },
+  {
+    "id": "gcp-001",
+    "title": "GCP로 컨테이너 오케스트레이션",
+    "prompt": "Google Kubernetes Engine을 사용해 컨테이너를 배포하고, 오토스케일링, 모니터링, CI/CD 통합을 구현해줘.",
+    "category": "클라우드",
+    "tool": "GCP",
+    "framework": "Kubernetes",
+    "level": "고급",
+    "keywords": [
+      "GKE",
+      "Kubernetes",
+      "컨테이너",
+      "오토스케일링",
+      "GCP"
+    ]
+  },
+  {
+    "id": "trend-007",
+    "title": "Remix로 풀스택 앱 개발",
+    "prompt": "Remix를 사용해 풀스택 웹 앱을 개발하고, 서버 컴포넌트, 데이터 로딩, 에러 바운더리, 프로그레시브 인핸스먼트를 구현해줘.",
+    "category": "풀스택",
+    "tool": "Remix",
+    "framework": "Remix",
+    "level": "중급",
+    "keywords": [
+      "Remix",
+      "서버 컴포넌트",
+      "데이터 로딩",
+      "풀스택",
+      "프로그레시브"
+    ]
+  },
+  {
+    "id": "trend-002",
+    "title": "Supabase로 풀스택 앱 개발",
+    "prompt": "Supabase를 백엔드로 사용해 풀스택 앱을 개발하고, 실시간 데이터베이스, 인증, 스토리지, Edge Functions를 활용해줘.",
+    "category": "풀스택",
+    "tool": "Supabase",
+    "framework": "Next.js",
+    "level": "중급",
+    "keywords": [
+      "Supabase",
+      "실시간",
+      "인증",
+      "Edge Functions",
+      "풀스택"
+    ]
+  },
+  {
+    "id": "trend-018",
+    "title": "tRPC로 타입세이프 API",
+    "prompt": "tRPC를 사용해 엔드투엔드 타입세이프 API를 구축하고, 실시간 구독, 미들웨어, 에러 처리, 배치 요청을 구현해줘.",
+    "category": "풀스택",
+    "tool": "tRPC",
+    "framework": "tRPC",
+    "level": "중급",
+    "keywords": [
+      "tRPC",
+      "타입세이프",
+      "실시간",
+      "미들웨어",
+      "배치"
+    ]
+  },
+  {
+    "id": "trend-005",
+    "title": "Astro로 콘텐츠 사이트 구축",
+    "prompt": "Astro를 사용해 고성능 콘텐츠 사이트를 구축하고, Island Architecture, MDX 지원, 다중 프레임워크 통합을 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Astro",
+    "framework": "Astro",
+    "level": "중급",
+    "keywords": [
+      "Astro",
+      "Island Architecture",
+      "MDX",
+      "정적 사이트",
+      "성능"
+    ]
+  },
+  {
+    "id": "trend-022",
+    "title": "Million.js로 React 최적화",
+    "prompt": "Million.js를 사용해 React 앱의 성능을 극대화하고, 가상 DOM 최적화, 자동 메모이제이션, 번들 크기 감소를 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Million.js",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "Million.js",
+      "React 최적화",
+      "가상 DOM",
+      "메모이제이션",
+      "성능"
+    ]
+  },
+  {
+    "id": "7b8c9d0e-1f2g-3h4i-5j6k-7l8m9n0o1p2q",
+    "title": "Next.js 13 App Router로 블로그 만들기",
+    "prompt": "Next.js 13의 App Router를 사용해 마크다운 파일을 기반으로 하는 블로그를 구현하고, 메타데이터와 SEO 최적화도 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "Next.js",
+    "framework": "Next.js",
+    "level": "중급",
+    "keywords": [
+      "블로그",
+      "마크다운",
+      "App Router",
+      "SEO",
+      "정적 생성"
+    ]
+  },
+  {
+    "id": "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7",
+    "title": "Next.js로 다크모드 구현",
+    "prompt": "Next.js 13에서 다크모드를 구현하고, 사용자 설정을 로컬 스토리지에 저장하며, 시스템 설정도 감지하도록 해줘.",
+    "category": "프론트엔드",
+    "tool": "Next.js",
+    "framework": "Next.js",
+    "level": "중급",
+    "keywords": [
+      "다크모드",
+      "테마",
+      "로컬 스토리지",
+      "시스템 설정",
+      "UI"
+    ]
+  },
+  {
+    "id": "trend-020",
+    "title": "Nuxt 3로 유니버설 앱",
+    "prompt": "Nuxt 3를 사용해 유니버설 Vue 앱을 개발하고, Nitro 서버, 자동 임포트, 하이브리드 렌더링, 모듈 시스템을 활용해줘.",
+    "category": "프론트엔드",
+    "tool": "Nuxt",
+    "framework": "Nuxt 3",
+    "level": "중급",
+    "keywords": [
+      "Nuxt 3",
+      "유니버설",
+      "Nitro",
+      "하이브리드 렌더링",
+      "Vue"
+    ]
+  },
+  {
+    "id": "trend-009",
+    "title": "Qwik으로 즉시 로딩 앱",
+    "prompt": "Qwik 프레임워크를 사용해 즉시 로딩되는 웹 앱을 만들고, Resumability, 지연 로딩, 최적화된 번들링을 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Qwik",
+    "framework": "Qwik",
+    "level": "고급",
+    "keywords": [
+      "Qwik",
+      "Resumability",
+      "즉시 로딩",
+      "지연 로딩",
+      "최적화"
+    ]
+  },
+  {
+    "id": "b4a72513-e07d-4c38-900e-64afb7cbf2e4",
+    "title": "React Zod 폼 유효성 검사",
+    "prompt": "React Hook Form과 Zod를 사용해 사용자 이름과 이메일을 입력받는 폼을 만들고, 유효성 검사 로직을 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "유효성 검사",
+      "Zod",
+      "React Hook Form",
+      "폼"
+    ]
+  },
+  {
+    "id": "q7r8s9t0-u1v2-w3x4-y5z6-a7b8c9d0e1f2",
+    "title": "React로 드래그 앤 드롭",
+    "prompt": "React DnD를 사용해 드래그 앤 드롭 기능을 구현하고, 드래그 중인 아이템의 시각적 피드백과 드롭 영역 표시도 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "드래그 앤 드롭",
+      "React DnD",
+      "인터랙션",
+      "UI",
+      "애니메이션"
+    ]
+  },
+  {
+    "id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+    "title": "React로 무한 스크롤 구현",
+    "prompt": "React와 Intersection Observer API를 사용해 무한 스크롤을 구현하고, 로딩 상태와 에러 처리도 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "무한 스크롤",
+      "Intersection Observer",
+      "로딩",
+      "에러 처리",
+      "UI"
+    ]
+  },
+  {
+    "id": "a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2",
+    "title": "React로 실시간 협업 에디터",
+    "prompt": "React와 WebSocket을 사용해 실시간 협업이 가능한 텍스트 에디터를 만들고, 변경 사항 동기화와 사용자 커서 표시도 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "React",
+    "level": "고급",
+    "keywords": [
+      "협업",
+      "실시간",
+      "에디터",
+      "동기화",
+      "WebSocket"
+    ]
+  },
+  {
+    "id": "w3x4y5z6-a7b8-c9d0-e1f2-g3h4i5j6k7l8",
+    "title": "React로 애니메이션 갤러리",
+    "prompt": "React와 Framer Motion을 사용해 이미지 갤러리를 만들고, 페이지 전환 애니메이션과 호버 효과도 포함해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "애니메이션",
+      "Framer Motion",
+      "갤러리",
+      "전환 효과",
+      "UI"
+    ]
+  },
+  {
+    "id": "trend-015",
+    "title": "Solid.js로 반응형 UI",
+    "prompt": "Solid.js를 사용해 세밀한 반응성을 가진 UI를 구축하고, 시그널, 리소스, 서스펜스, 최적화된 렌더링을 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Solid.js",
+    "framework": "Solid.js",
+    "level": "중급",
+    "keywords": [
+      "Solid.js",
+      "시그널",
+      "반응성",
+      "세밀한 업데이트",
+      "성능"
+    ]
+  },
+  {
+    "id": "svelte-001",
+    "title": "SvelteKit으로 전자상거래 사이트",
+    "prompt": "SvelteKit을 사용해 전자상거래 사이트를 만들고, 장바구니, 결제 통합, SSR, SEO 최적화를 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Svelte",
+    "framework": "SvelteKit",
+    "level": "중급",
+    "keywords": [
+      "SvelteKit",
+      "전자상거래",
+      "장바구니",
+      "SSR",
+      "SEO"
+    ]
+  },
+  {
+    "id": "trend-006",
+    "title": "Tailwind CSS v4로 디자인 시스템",
+    "prompt": "Tailwind CSS v4를 사용해 디자인 시스템을 구축하고, CSS-in-JS 마이그레이션, 다크모드, 컴포넌트 라이브러리를 만들어줘.",
+    "category": "프론트엔드",
+    "tool": "Tailwind CSS",
+    "framework": "React",
+    "level": "중급",
+    "keywords": [
+      "Tailwind v4",
+      "디자인 시스템",
+      "CSS-in-JS",
+      "다크모드",
+      "컴포넌트"
+    ]
+  },
+  {
+    "id": "vue-001",
+    "title": "Vue.js로 Todo 앱 만들기",
+    "prompt": "Vue 3 Composition API를 사용해 Todo 앱을 만들고, Vuex로 상태 관리, 로컬 스토리지 연동, 필터링 기능을 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Vue.js",
+    "framework": "Vue",
+    "level": "중급",
+    "keywords": [
+      "Vue 3",
+      "Composition API",
+      "Vuex",
+      "Todo",
+      "상태 관리"
+    ]
+  },
+  {
+    "id": "trend-012",
+    "title": "htmx로 하이퍼미디어 앱",
+    "prompt": "htmx를 사용해 서버 주도 하이퍼미디어 앱을 만들고, AJAX 요청, 부분 업데이트, 프로그레시브 인핸스먼트를 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "htmx",
+    "framework": "htmx",
+    "level": "중급",
+    "keywords": [
+      "htmx",
+      "하이퍼미디어",
+      "AJAX",
+      "서버 주도",
+      "부분 업데이트"
+    ]
+  },
+  {
+    "id": "advanced-004",
+    "title": "고성능 React 애플리케이션",
+    "prompt": "당신은 프론트엔드 성능 전문가입니다. 대규모 React 애플리케이션의 성능을 극한으로 최적화해주세요:\n\n**렌더링 최적화:**\n- React 18 Concurrent Features 활용\n- Suspense + Streaming SSR\n- 가상화 (react-window)\n- 메모이제이션 전략\n\n**번들 최적화:**\n- 코드 스플리팅 (동적 import)\n- Tree shaking 최적화\n- Webpack 5 Module Federation\n- Critical CSS 추출\n\n**상태 관리:**\n- Zustand + Immer 조합\n- React Query 캐싱\n- 낙관적 업데이트\n- 상태 정규화\n\n**성능 모니터링:**\n- Web Vitals 추적\n- React DevTools Profiler\n- Lighthouse CI 통합\n- 실시간 성능 알림\n\n**고급 패턴:**\n- Compound Components\n- Render Props\n- Higher-Order Components\n- Custom Hooks 최적화\n\n성능 측정 도구와 CI/CD 통합도 포함해주세요.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "Next.js",
+    "level": "고급",
+    "keywords": [
+      "성능 최적화",
+      "Concurrent React",
+      "번들 최적화",
+      "Web Vitals",
+      "코드 스플리팅",
+      "상태 관리"
+    ]
+  },
+  {
+    "id": "6538bf7c-4442-43e5-b98d-2beaaa06dfcc",
+    "title": "반응형 로그인 폼 생성",
+    "prompt": "React와 TailwindCSS를 사용해 사용자 이메일과 비밀번호를 입력받는 반응형 로그인 폼을 구현하고, 모바일에서도 적절히 동작하도록 해줘.",
+    "category": "프론트엔드",
+    "tool": "React",
+    "framework": "Next.js",
+    "level": "입문",
+    "keywords": [
+      "로그인",
+      "폼",
+      "반응형",
+      "Tailwind",
+      "UI"
+    ]
+  }
+]

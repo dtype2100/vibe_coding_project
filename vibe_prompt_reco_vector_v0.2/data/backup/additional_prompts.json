@@ -1,0 +1,482 @@
+[
+  {
+    "id": "spring-001",
+    "title": "Spring Boot로 REST API 구축",
+    "prompt": "Spring Boot를 사용해 RESTful API를 구축하고, JPA를 이용한 데이터베이스 연동, 유효성 검사, 예외 처리를 포함해줘.",
+    "category": "백엔드",
+    "tool": "Spring Boot",
+    "framework": "Spring",
+    "level": "중급",
+    "keywords": [
+      "REST API",
+      "JPA",
+      "유효성 검사",
+      "예외 처리",
+      "Spring Boot"
+    ]
+  },
+  {
+    "id": "django-001",
+    "title": "Django로 블로그 플랫폼 만들기",
+    "prompt": "Django를 사용해 블로그 플랫폼을 만들고, 사용자 인증, 댓글 시스템, 태그 기능, 검색 기능을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Django",
+    "framework": "Django",
+    "level": "중급",
+    "keywords": [
+      "블로그",
+      "Django",
+      "인증",
+      "댓글",
+      "검색"
+    ]
+  },
+  {
+    "id": "vue-001",
+    "title": "Vue.js로 Todo 앱 만들기",
+    "prompt": "Vue 3 Composition API를 사용해 Todo 앱을 만들고, Vuex로 상태 관리, 로컬 스토리지 연동, 필터링 기능을 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Vue.js",
+    "framework": "Vue",
+    "level": "중급",
+    "keywords": [
+      "Vue 3",
+      "Composition API",
+      "Vuex",
+      "Todo",
+      "상태 관리"
+    ]
+  },
+  {
+    "id": "flutter-001",
+    "title": "Flutter로 날씨 앱 개발",
+    "prompt": "Flutter를 사용해 날씨 앱을 개발하고, API 연동, 위치 권한, 애니메이션, 다크모드를 구현해줘.",
+    "category": "모바일",
+    "tool": "Flutter",
+    "framework": "Flutter",
+    "level": "중급",
+    "keywords": [
+      "Flutter",
+      "날씨",
+      "API",
+      "위치",
+      "애니메이션"
+    ]
+  },
+  {
+    "id": "rust-001",
+    "title": "Rust로 CLI 도구 만들기",
+    "prompt": "Rust로 파일 시스템을 관리하는 CLI 도구를 만들고, 에러 처리, 비동기 작업, 크로스 플랫폼 지원을 포함해줘.",
+    "category": "시스템프로그래밍",
+    "tool": "Rust",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Rust",
+      "CLI",
+      "파일 시스템",
+      "비동기",
+      "크로스 플랫폼"
+    ]
+  },
+  {
+    "id": "golang-001",
+    "title": "Go로 마이크로서비스 구축",
+    "prompt": "Go를 사용해 마이크로서비스를 구축하고, gRPC 통신, 서비스 디스커버리, 헬스 체크, 로깅을 구현해줘.",
+    "category": "백엔드",
+    "tool": "Go",
+    "framework": "없음",
+    "level": "고급",
+    "keywords": [
+      "Go",
+      "마이크로서비스",
+      "gRPC",
+      "서비스 디스커버리",
+      "헬스 체크"
+    ]
+  },
+  {
+    "id": "svelte-001",
+    "title": "SvelteKit으로 전자상거래 사이트",
+    "prompt": "SvelteKit을 사용해 전자상거래 사이트를 만들고, 장바구니, 결제 통합, SSR, SEO 최적화를 구현해줘.",
+    "category": "프론트엔드",
+    "tool": "Svelte",
+    "framework": "SvelteKit",
+    "level": "중급",
+    "keywords": [
+      "SvelteKit",
+      "전자상거래",
+      "장바구니",
+      "SSR",
+      "SEO"
+    ]
+  },
+  {
+    "id": "pytorch-001",
+    "title": "PyTorch로 이미지 분류기",
+    "prompt": "PyTorch를 사용해 CNN 기반 이미지 분류기를 만들고, 데이터 증강, 전이 학습, 모델 최적화를 포함해줘.",
+    "category": "AI/ML",
+    "tool": "PyTorch",
+    "framework": "PyTorch",
+    "level": "고급",
+    "keywords": [
+      "PyTorch",
+      "CNN",
+      "이미지 분류",
+      "전이 학습",
+      "데이터 증강"
+    ]
+  },
+  {
+    "id": "tensorflow-001",
+    "title": "TensorFlow로 시계열 예측",
+    "prompt": "TensorFlow를 사용해 LSTM 기반 시계열 예측 모델을 만들고, 데이터 전처리, 하이퍼파라미터 튜닝, 모델 평가를 포함해줘.",
+    "category": "AI/ML",
+    "tool": "TensorFlow",
+    "framework": "TensorFlow",
+    "level": "고급",
+    "keywords": [
+      "TensorFlow",
+      "LSTM",
+      "시계열",
+      "예측",
+      "하이퍼파라미터"
+    ]
+  },
+  {
+    "id": "mongodb-001",
+    "title": "MongoDB로 실시간 채팅 백엔드",
+    "prompt": "MongoDB를 사용해 실시간 채팅 백엔드를 구축하고, 메시지 저장, 사용자 관리, 채널 기능, 읽음 표시를 구현해줘.",
+    "category": "데이터베이스",
+    "tool": "MongoDB",
+    "framework": "Express",
+    "level": "중급",
+    "keywords": [
+      "MongoDB",
+      "채팅",
+      "실시간",
+      "NoSQL",
+      "메시지"
+    ]
+  },
+  {
+    "id": "graphql-001",
+    "title": "GraphQL API 서버 구축",
+    "prompt": "Apollo Server를 사용해 GraphQL API를 구축하고, 스키마 설계, 리졸버, 인증, 페이지네이션을 구현해줘.",
+    "category": "백엔드",
+    "tool": "GraphQL",
+    "framework": "Apollo",
+    "level": "중급",
+    "keywords": [
+      "GraphQL",
+      "Apollo",
+      "스키마",
+      "리졸버",
+      "페이지네이션"
+    ]
+  },
+  {
+    "id": "redis-001",
+    "title": "Redis로 캐싱 시스템 구현",
+    "prompt": "Redis를 사용해 고성능 캐싱 시스템을 구현하고, 캐시 무효화, TTL 관리, 분산 캐싱, 모니터링을 포함해줘.",
+    "category": "데이터베이스",
+    "tool": "Redis",
+    "framework": "없음",
+    "level": "중급",
+    "keywords": [
+      "Redis",
+      "캐싱",
+      "TTL",
+      "분산 캐싱",
+      "성능"
+    ]
+  },
+  {
+    "id": "elasticsearch-001",
+    "title": "Elasticsearch로 검색 엔진",
+    "prompt": "Elasticsearch를 사용해 전문 검색 엔진을 구축하고, 한글 형태소 분석, 자동완성, 동의어 처리, 검색 랭킹을 구현해줘.",
+    "category": "검색",
+    "tool": "Elasticsearch",
+    "framework": "Elasticsearch",
+    "level": "고급",
+    "keywords": [
+      "Elasticsearch",
+      "검색",
+      "형태소 분석",
+      "자동완성",
+      "랭킹"
+    ]
+  },
+  {
+    "id": "kafka-001",
+    "title": "Kafka로 이벤트 스트리밍",
+    "prompt": "Apache Kafka를 사용해 이벤트 스트리밍 시스템을 구축하고, 프로듀서/컨슈머, 파티셔닝, 오프셋 관리를 구현해줘.",
+    "category": "데이터엔지니어링",
+    "tool": "Kafka",
+    "framework": "Kafka",
+    "level": "고급",
+    "keywords": [
+      "Kafka",
+      "이벤트 스트리밍",
+      "프로듀서",
+      "컨슈머",
+      "파티셔닝"
+    ]
+  },
+  {
+    "id": "airflow-001",
+    "title": "Airflow로 데이터 파이프라인",
+    "prompt": "Apache Airflow를 사용해 데이터 파이프라인을 구축하고, DAG 설계, 스케줄링, 에러 처리, 알림 기능을 구현해줘.",
+    "category": "데이터엔지니어링",
+    "tool": "Airflow",
+    "framework": "Airflow",
+    "level": "고급",
+    "keywords": [
+      "Airflow",
+      "데이터 파이프라인",
+      "DAG",
+      "스케줄링",
+      "워크플로우"
+    ]
+  },
+  {
+    "id": "beginner-001",
+    "title": "Python으로 구구단 출력",
+    "prompt": "Python으로 구구단을 출력하는 프로그램을 만들고, 사용자가 원하는 단을 선택할 수 있도록 해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "구구단",
+      "반복문",
+      "입력",
+      "출력",
+      "기초"
+    ]
+  },
+  {
+    "id": "beginner-002",
+    "title": "Python으로 BMI 계산기",
+    "prompt": "Python으로 키와 몸무게를 입력받아 BMI를 계산하고, 비만도를 판정하는 프로그램을 작성해줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "BMI",
+      "계산",
+      "조건문",
+      "입력",
+      "판정"
+    ]
+  },
+  {
+    "id": "beginner-003",
+    "title": "Python으로 로또 번호 생성기",
+    "prompt": "Python으로 1부터 45까지의 숫자 중 6개를 랜덤으로 선택하는 로또 번호 생성기를 만들어줘.",
+    "category": "기초",
+    "tool": "Python",
+    "framework": "없음",
+    "level": "입문",
+    "keywords": [
+      "로또",
+      "랜덤",
+      "리스트",
+      "정렬",
+      "기초"
+    ]
+  },
+  {
+    "id": "ansible-001",
+    "title": "Ansible로 서버 자동화",
+    "prompt": "Ansible을 사용해 서버 프로비저닝을 자동화하고, 플레이북 작성, 롤 생성, 인벤토리 관리, 시크릿 관리를 구현해줘.",
+    "category": "DevOps",
+    "tool": "Ansible",
+    "framework": "Ansible",
+    "level": "중급",
+    "keywords": [
+      "Ansible",
+      "자동화",
+      "플레이북",
+      "프로비저닝",
+      "인프라"
+    ]
+  },
+  {
+    "id": "jenkins-001",
+    "title": "Jenkins로 CI/CD 파이프라인",
+    "prompt": "Jenkins를 사용해 CI/CD 파이프라인을 구축하고, 빌드, 테스트, 배포 자동화, 알림 설정을 구현해줘.",
+    "category": "DevOps",
+    "tool": "Jenkins",
+    "framework": "Jenkins",
+    "level": "중급",
+    "keywords": [
+      "Jenkins",
+      "CI/CD",
+      "파이프라인",
+      "자동화",
+      "배포"
+    ]
+  },
+  {
+    "id": "prometheus-001",
+    "title": "Prometheus로 모니터링 시스템",
+    "prompt": "Prometheus와 Grafana를 사용해 모니터링 시스템을 구축하고, 메트릭 수집, 알림 규칙, 대시보드를 구성해줘.",
+    "category": "DevOps",
+    "tool": "Prometheus",
+    "framework": "Prometheus",
+    "level": "중급",
+    "keywords": [
+      "Prometheus",
+      "모니터링",
+      "Grafana",
+      "메트릭",
+      "알림"
+    ]
+  },
+  {
+    "id": "rabbitmq-001",
+    "title": "RabbitMQ로 메시지 큐 시스템",
+    "prompt": "RabbitMQ를 사용해 메시지 큐 시스템을 구축하고, 익스체인지, 라우팅, 데드레터 큐, 클러스터링을 구현해줘.",
+    "category": "메시징",
+    "tool": "RabbitMQ",
+    "framework": "RabbitMQ",
+    "level": "중급",
+    "keywords": [
+      "RabbitMQ",
+      "메시지 큐",
+      "익스체인지",
+      "라우팅",
+      "비동기"
+    ]
+  },
+  {
+    "id": "nginx-001",
+    "title": "Nginx로 리버스 프록시 구성",
+    "prompt": "Nginx를 사용해 리버스 프록시를 구성하고, 로드밸런싱, SSL 설정, 캐싱, 압축을 구현해줘.",
+    "category": "DevOps",
+    "tool": "Nginx",
+    "framework": "Nginx",
+    "level": "중급",
+    "keywords": [
+      "Nginx",
+      "리버스 프록시",
+      "로드밸런싱",
+      "SSL",
+      "캐싱"
+    ]
+  },
+  {
+    "id": "aws-001",
+    "title": "AWS Lambda로 서버리스 API",
+    "prompt": "AWS Lambda와 API Gateway를 사용해 서버리스 API를 구축하고, DynamoDB 연동, 인증, 에러 처리를 구현해줘.",
+    "category": "클라우드",
+    "tool": "AWS",
+    "framework": "Serverless",
+    "level": "중급",
+    "keywords": [
+      "AWS Lambda",
+      "서버리스",
+      "API Gateway",
+      "DynamoDB",
+      "클라우드"
+    ]
+  },
+  {
+    "id": "gcp-001",
+    "title": "GCP로 컨테이너 오케스트레이션",
+    "prompt": "Google Kubernetes Engine을 사용해 컨테이너를 배포하고, 오토스케일링, 모니터링, CI/CD 통합을 구현해줘.",
+    "category": "클라우드",
+    "tool": "GCP",
+    "framework": "Kubernetes",
+    "level": "고급",
+    "keywords": [
+      "GKE",
+      "Kubernetes",
+      "컨테이너",
+      "오토스케일링",
+      "GCP"
+    ]
+  },
+  {
+    "id": "azure-001",
+    "title": "Azure Functions로 이벤트 처리",
+    "prompt": "Azure Functions를 사용해 이벤트 기반 처리 시스템을 구축하고, Blob Storage 트리거, 큐 처리, 타이머 작업을 구현해줘.",
+    "category": "클라우드",
+    "tool": "Azure",
+    "framework": "Azure Functions",
+    "level": "중급",
+    "keywords": [
+      "Azure Functions",
+      "이벤트",
+      "트리거",
+      "서버리스",
+      "클라우드"
+    ]
+  },
+  {
+    "id": "spark-001",
+    "title": "Apache Spark로 빅데이터 처리",
+    "prompt": "Apache Spark를 사용해 대용량 데이터를 처리하고, RDD/DataFrame 작업, 스트리밍 처리, 머신러닝을 구현해줘.",
+    "category": "빅데이터",
+    "tool": "Spark",
+    "framework": "Spark",
+    "level": "고급",
+    "keywords": [
+      "Spark",
+      "빅데이터",
+      "DataFrame",
+      "스트리밍",
+      "분산 처리"
+    ]
+  },
+  {
+    "id": "hadoop-001",
+    "title": "Hadoop으로 분산 저장 시스템",
+    "prompt": "Hadoop HDFS를 사용해 분산 파일 시스템을 구축하고, MapReduce 작업, 데이터 복제, 장애 복구를 구현해줘.",
+    "category": "빅데이터",
+    "tool": "Hadoop",
+    "framework": "Hadoop",
+    "level": "고급",
+    "keywords": [
+      "Hadoop",
+      "HDFS",
+      "MapReduce",
+      "분산 저장",
+      "빅데이터"
+    ]
+  },
+  {
+    "id": "unity-001",
+    "title": "Unity로 2D 플랫포머 게임",
+    "prompt": "Unity를 사용해 2D 플랫포머 게임을 만들고, 캐릭터 컨트롤, 충돌 감지, 점수 시스템, 레벨 디자인을 구현해줘.",
+    "category": "게임개발",
+    "tool": "Unity",
+    "framework": "Unity",
+    "level": "중급",
+    "keywords": [
+      "Unity",
+      "2D 게임",
+      "플랫포머",
+      "충돌 감지",
+      "게임 개발"
+    ]
+  },
+  {
+    "id": "unreal-001",
+    "title": "Unreal Engine으로 FPS 게임",
+    "prompt": "Unreal Engine을 사용해 FPS 게임 프로토타입을 만들고, 캐릭터 이동, 총기 시스템, AI 적, 네트워킹을 구현해줘.",
+    "category": "게임개발",
+    "tool": "Unreal",
+    "framework": "Unreal Engine",
+    "level": "고급",
+    "keywords": [
+      "Unreal Engine",
+      "FPS",
+      "게임 개발",
+      "AI",
+      "네트워킹"
+    ]
+  }
+]
